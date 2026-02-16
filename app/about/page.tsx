@@ -8,7 +8,7 @@ export default function AboutPage() {
       imageSrc="/about_header.jpeg"
       imageAlt="About header"
       title="The Soul Behind the Seam"
-      imgClassName="w-full h-[380px] object-fill"
+      imgClassName="w-full h-fill object-fill"
     />
     <main>
       <section className="mx-auto max-w-[980px] px-6 py-10">

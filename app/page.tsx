@@ -17,7 +17,7 @@ export default function HomePage() {
       <Header
         imageSrc="/logo.jpeg"
         imageAlt="Soul to Seam logo"
-        imgClassName="w-full h-[380px] object-fill"
+        imgClassName="w-full h-full object-fill"
       />
     <main>
       {/* Tagline */}

@@ -2,13 +2,13 @@
 
 :root {
   /* STS base palette */
-  --background: #f7f3eb;
+  --background: #F5F3EF;
   --foreground: #1a1a1a;
 
-  --sts-bg: #f5f3ef;
+  --sts-bg: #F5F3EF;
   --sts-text: #1a1a1a;
-  --sts-section-a: #e8e4de;
-  --sts-section-b: #e3ded7;
+  --sts-section-a: #E3DED7;
+  --sts-section-b: #E3DED7;
   --sts-accent: #7d8c6f;
 }
 
