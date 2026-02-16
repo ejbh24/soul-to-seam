@@ -26,9 +26,9 @@ export function Header({
       />
 
       {/* Nav overlay */}
-      <div className="absolute top-0 right-0 z-10 pl-[4vw] pr-[2vw] pt-[2vw] md:pr-6 md:pt-6">
+      <div className="absolute top-0 right-0 z-10 pl-[4vw] pr-[2vw] pt-[1vw] md:pr-6 md:pt-6">
         <nav
-          className={`flex items-center gap-[4vw] md:gap-7 text-[3.5vw] md:text-lg ${
+          className={`flex items-center gap-[4vw] md:gap-7 text-[3vw] md:text-lg ${
              navClassName ?? "text-black"
           }`}
         >   
