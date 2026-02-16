@@ -35,7 +35,7 @@ export default function HomePage() {
           <span className="text-black/50">Hero Shot / Main Pic</span>
         </div>
 
-        <p className="mt-8 text-center text-[3vw] md:text-sm text-black/70">
+        <p className="mt-8 text-center text-[2.5vw] md:text-sm text-black/70">
           A patent-pending design that transforms into a structured carry.
         </p>
 
@@ -44,7 +44,7 @@ export default function HomePage() {
             placeholder="Email"
             className="w-[420px] max-w-[65vw] rounded-md border border-black/10 bg-white px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sts-accent/40"
           />
-          <button className="rounded-md bg-sts-accent px-4 py-2 text-[3vw] md:text-sm text-sts-bg hover:opacity-90">
+          <button className="rounded-md bg-sts-accent px-4 py-2 text-[2.5vw] md:text-sm text-sts-bg hover:opacity-90">
             Join Early Access
           </button>
         </div>
@@ -81,7 +81,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <p className="mt-6 text-[3vw] md:text-sm text-black/70">
+          <p className="mt-6 text-[3.5vw] md:text-sm text-black/70">
             Converts in seconds. Pocket access in both forms. Patent Pending.
           </p>
 
