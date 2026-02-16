@@ -24,8 +24,8 @@ export function Header({
       />
 
       {/* Nav overlay */}
-      <div className="absolute top-0 right-0 z-10 px-6 pt-5">
-        <nav className="flex items-center gap-7 text-lg text-black">
+      <div className="absolute top-0 right-0 z-10 px-6 pt-2 md:pt-6">
+        <nav className="flex items-center gap-4 md:gap-7 text-lg text-black">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/#studio">From the Studio</Link>
@@ -35,7 +35,7 @@ export function Header({
       {/* Optional title overlay */}
       {title && (
         <div className="pointer-events-none absolute inset-0 flex items-center px-6">
-          <h1 className="pl-41 pt-5 md:pt-0 sm:pl-160 text-3xl sm:text-8xl font-medium leading-tight text-black">
+          <h1 className="pl-41 pt-3 md:pt-0 sm:pl-160 text-3xl sm:text-8xl font-medium leading-tight text-black">
             {title}
           </h1>
         </div>
