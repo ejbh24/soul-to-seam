@@ -31,7 +31,7 @@ export default function HomePage() {
 
       {/* Hero image placeholder */}
       <Section className="pb-10">
-        <div className="mx-auto h-[520px] max-w-[520px] rounded bg-black/10 flex items-center justify-center">
+        <div className="mx-auto w-[90vw] md:w-[40vw] h-[72vw] md:h-[45vw] rounded bg-black/10 flex items-center justify-center">
           <span className="text-black/50">Hero Shot / Main Pic</span>
         </div>
 
@@ -59,7 +59,7 @@ export default function HomePage() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="h-40 rounded bg-black/10 flex items-center justify-center text-black/50 text-sm"
+              className="group relative h-56 rounded bg-black/10 flex items-center justify-center"
             >
               Image {i}
             </div>
@@ -73,10 +73,10 @@ export default function HomePage() {
           <h2 className="text-xl">Outerwear That Carries Itself</h2>
 
           <div className="mt-8 grid grid-cols-2 gap-6">
-            <div className="h-[360px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
+             <div className="h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
               Bag form
             </div>
-            <div className="h-[360px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
+             <div className="h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
               Jacket form / gif
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function HomePage() {
             {[1, 2, 3].map((i) => (
               <button
                 key={i}
-                className="group relative h-56 rounded bg-black/10 flex items-center justify-center"
+                className="group relative h-96 rounded bg-black/10 flex items-center justify-center"
                 aria-label={`Studio image ${i}`}
               >
                 <span className="text-black/50 text-sm">Studio {i}</span>
