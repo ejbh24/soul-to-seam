@@ -21,9 +21,13 @@ export default function HomePage() {
       />
     <main>
       {/* Tagline */}
-      <Section className="pt-10 pb-8 text-center">
-        <p className="text-lg text-black/70">It Doesn’t Stay a Jacket.</p>
-      </Section>
+      <div className="w-full bg-sts-sectionA">
+        <Section className="py-6 text-center">
+          <p className="text-[2.5vw] text-black/70">It Doesn’t Stay a Jacket.</p>
+        </Section>
+      </div>
+
+      <div className="h-8" /> {/* <-- adjust: h-4, h-8, etc. */}
 
       {/* Hero image placeholder */}
       <Section className="pb-10">
