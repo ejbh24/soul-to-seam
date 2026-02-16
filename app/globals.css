@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* STS base palette */
+  --background: #f5f3ef;
+  --foreground: #1a1a1a;
+
+  --sts-bg: #f5f3ef;
+  --sts-text: #1a1a1a;
+  --sts-section-a: #e8e4de;
+  --sts-section-b: #e3ded7;
+  --sts-accent: #7d8c6f;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Keep Next/Geist vars from the template */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Expose colors as Tailwind tokens (v4) */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-sts-bg: var(--sts-bg);
+  --color-sts-text: var(--sts-text);
+  --color-sts-sectionA: var(--sts-section-a);
+  --color-sts-sectionB: var(--sts-section-b);
+  --color-sts-accent: var(--sts-accent);
 }
 
+/* Optional: you can keep dark mode later; for now, lock brand look */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f5f3ef;
+    --foreground: #1a1a1a;
   }
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
