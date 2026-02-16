@@ -49,8 +49,8 @@ export default function AboutPage() {
         </div>
 
         {/* Founder block */}
-        <div className="mt-10 grid grid-cols-[240px_1fr] gap-8 items-start">
-          <div className="relative h-72 rounded overflow-hidden">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-[35%_1fr] gap-8 items-start">
+          <div className="relative w-full md:w-full aspect-[4/5] rounded overflow-hidden">
             <Image
               src="/graduation_pic.jpg"
               alt="Anapaula Gutierrez"
@@ -70,12 +70,12 @@ export default function AboutPage() {
               clothing for herself, became a long-term exploration of how garments can adapt to
               the people who wear them.
             </p>
-            <p className="mt-6">
-              At its core, Soul to Seam is about designing for real life, for movement, transition, and self-expression
-              without compromise.
-            </p>
           </div>
         </div>
+        <p className="mt-6">
+          At its core, Soul to Seam is about designing for real life, for movement, transition,
+          and self-expression without compromise.
+        </p>
       </section>
 
       {/* Founding Edition CTA repeat */}
