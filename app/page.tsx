@@ -31,7 +31,7 @@ export default function HomePage() {
 
       {/* Hero image placeholder */}
       <Section className="pb-10">
-        <div className="mx-auto w-[60vw] md:w-[40vw] h-[82vw] md:h-[45vw] rounded bg-black/10 flex items-center justify-center">
+        <div className="mx-auto w-[67vw] md:w-[40vw] h-[84vw] md:h-[45vw] rounded bg-black/10 flex items-center justify-center">
           <span className="text-black/50">Hero Shot / Main Pic</span>
         </div>
 
