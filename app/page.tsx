@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { Header } from "@/components/Header";
 import { ScrollOnLoad } from "@/components/ScrollOnLoad";
 import { ScrollButton } from "@/components/ScrollButton";
@@ -16,7 +17,9 @@ function Section({
 export default function HomePage() {
   return (
     <>
-      <ScrollOnLoad />
+      <Suspense fallback={null}>
+        <ScrollOnLoad />
+      </Suspense>
       <Header
         imageSrc="/logo.jpeg"
         imageAlt="Soul to Seam logo"
@@ -39,7 +42,7 @@ export default function HomePage() {
         </div>
 
         <p className="mt-8 text-center text-[2.5vw] md:text-sm text-black/70">
-          A patent-pending design that transforms into a structured carry. Hi!
+          A patent-pending design that transforms into a structured carry.
         </p>
 
         <div className="mt-4 flex items-center justify-center gap-3">
