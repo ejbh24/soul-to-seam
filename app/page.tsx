@@ -72,7 +72,7 @@ export default function HomePage() {
         <Section className="pt-12 pb-14 text-center">
           <h2 className="text-xl">Outerwear That Carries Itself</h2>
 
-          <div className="mt-8 grid grid-cols-2 gap-[2.5vm] md:gap-6">
+          <div className="mt-8 grid grid-cols-2 gap-[2.5vw] md:gap-6">
              <div className="md:w-full w-[37vw] h-[65vw] md:h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
               Bag form
             </div>
