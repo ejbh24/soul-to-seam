@@ -9,7 +9,7 @@ export function Header({
 }: {
   imageSrc: string;
   imageAlt: string;
-  title?: string;
+  title?: React.ReactNode;
   imgClassName?: string;
 }) {
   return (
@@ -35,7 +35,7 @@ export function Header({
       {/* Optional title overlay */}
       {title && (
         <div className="pointer-events-none absolute inset-0 flex items-center px-6">
-          <h1 className="mx-auto w-full max-w-[980px] text-3xl sm:text-5xl font-medium text-white">
+          <h1 className="pl-160 text-5xl sm:text-8xl font-medium leading-tight text-black">
             {title}
           </h1>
         </div>

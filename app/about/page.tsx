@@ -7,7 +7,13 @@ export default function AboutPage() {
     <Header
       imageSrc="/about_header.jpeg"
       imageAlt="About header"
-      title="The Soul Behind the Seam"
+      title={
+        <>
+          The Soul Behind
+          <br />
+          the Seam
+        </>
+      }
       imgClassName="w-full h-fill object-fill"
     />
     <main>
