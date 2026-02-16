@@ -119,6 +119,33 @@ export default function AboutPage() {
 
       <div className="h-24" />
     </main>
+    {foundingEmail.showThanks && (
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
+        onClick={() => foundingEmail.setShowThanks(false)}
+      >
+      <div
+        className="bg-white p-6 rounded-xl shadow-lg"
+        onClick={(e) => e.stopPropagation()}
+      >
+      <div className="flex justify-between items-start gap-6">
+        <div>
+          <h3 className="font-semibold">Thanks for signing up.</h3>
+          <p className="text-sm text-black/70 mt-1">
+            You’re on the early access list!
+          </p>
+        </div>
+          <button
+            onClick={() => foundingEmail.setShowThanks(false)}
+            className="text-black/60 hover:text-black"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+    </div>
+  )}
+
     </>
   );
 }
