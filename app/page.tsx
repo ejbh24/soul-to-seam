@@ -1,8 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { Suspense } from "react";
 import { Header } from "@/components/Header";
 import { ScrollOnLoad } from "@/components/ScrollOnLoad";
-import { ScrollButton } from "@/components/ScrollButton";
+import { useEmailCapture } from "@/components/useEmailCapture"
 
 function Section({
   className = "",
@@ -15,6 +17,8 @@ function Section({
 }
 
 export default function HomePage() {
+  const heroEmail = useEmailCapture("home-hero");
+  const foundingEmail = useEmailCapture("home-founding");
   return (
     <>
       <Suspense fallback={null}>
@@ -47,13 +51,28 @@ export default function HomePage() {
 
         <div className="mt-4 flex items-center justify-center gap-3">
           <input
+            value={heroEmail.email}
+            onChange={(e) => heroEmail.setEmail(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && heroEmail.submit()}
             placeholder="Email"
             className="w-[420px] max-w-[65vw] rounded-md border border-black/10 bg-white px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sts-accent/40"
           />
-          <button className="rounded-md bg-sts-accent px-4 py-2 text-[2.5vw] md:text-sm text-sts-bg hover:opacity-90">
-            Join Early Access
+
+          <button
+           onClick={heroEmail.submit}
+           disabled={heroEmail.loading}
+           className="rounded-md bg-sts-accent px-4 py-2 text-[2.5vw] md:text-sm text-sts-bg hover:opacity-90"
+          >
+            {heroEmail.loading ? "Submitting..." : "Join Early Access"}
           </button>
         </div>
+
+        {heroEmail.error && (
+          <p className="mt-2 text-xs text-red-600 text-center">
+            {heroEmail.error}
+          </p>
+        )}
+
       </Section>
 
       {/* Jacket problem */}
@@ -141,17 +160,32 @@ export default function HomePage() {
           </p>
           <p className="mt-3 text-xs text-black/70">Patent Pending · $245</p>
 
-          <div className="mt-6 flex items-center justify-center gap-3">
-            <input
-              placeholder="Email"
-              className="w-[520px] max-w-[70vw] rounded-md border border-black/10 bg-white px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sts-accent/40"
-            />
-          </div>
+          <div className="mt-6 flex flex-col items-center justify-center">
+            <div className="flex items-center justify-center gap-3">
+              <input
+                value={foundingEmail.email}
+                onChange={(e) => foundingEmail.setEmail(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && foundingEmail.submit()}
+                placeholder="Email"
+                className="w-[520px] max-w-[70vw] rounded-md border border-black/10 bg-white px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sts-accent/40"
+               />
+            </div>
 
-          <button className="mt-4 rounded-md bg-sts-accent px-6 py-2 text-sm text-sts-bg hover:opacity-90">
-            Join Early Access
-          </button>
+            {foundingEmail.error && (
+              <p className="mt-2 text-xs text-red-600 text-center">
+                {foundingEmail.error}
+               </p>
+            )}
 
+            <button
+              onClick={foundingEmail.submit}
+              disabled={foundingEmail.loading}
+              className="mt-4 rounded-md bg-sts-accent px-6 py-2 text-sm text-sts-bg hover:opacity-90"
+              >
+             {foundingEmail.loading ? "Submitting..." : "Join Early Access"}
+           </button>
+         </div>
+ 
           <p className="mt-3 text-xs text-black/70">Early access to the 15-piece Founding Edition.</p>
 
           <div className="mt-10">
@@ -164,6 +198,33 @@ export default function HomePage() {
 
       <div className="h-24" />
     </main>
+    {heroEmail.showThanks && (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40"
+      onClick={() => heroEmail.setShowThanks(false)}
+    >
+    <div
+      className="bg-white p-6 rounded-xl shadow-lg"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="flex justify-between items-start gap-6">
+        <div>
+          <h3 className="font-semibold">Thanks for signing up.</h3>
+          <p className="text-sm text-black/70 mt-1">
+            You’re on the early access list!
+          </p>
+        </div>
+          <button
+            onClick={() => heroEmail.setShowThanks(false)}
+            className="text-black/60 hover:text-black"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+    </div>
+    )}
+
     </>
   );
 }

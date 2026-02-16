@@ -1,7 +1,11 @@
+"use client";
+
 import { Header } from "@/components/Header";
 import Image from "next/image";
+import { useEmailCapture } from "@/components/useEmailCapture";
 
 export default function AboutPage() {
+  const foundingEmail = useEmailCapture("about-founding");
   return (
     <>
     <Header
@@ -87,14 +91,27 @@ export default function AboutPage() {
 
           <div className="mt-6 flex items-center justify-center">
             <input
+              value={foundingEmail.email}
+              onChange={(e) => foundingEmail.setEmail(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && foundingEmail.submit()}
               placeholder="Email"
               className="w-[520px] max-w-[70vw] rounded-md border border-black/10 bg-white px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sts-accent/40"
             />
           </div>
 
-          <button className="mt-4 rounded-md bg-sts-accent px-6 py-2 text-sm text-sts-bg hover:opacity-90">
-            Join Early Access
+          <button
+            onClick={foundingEmail.submit}
+            disabled={foundingEmail.loading}
+            className="mt-4 rounded-md bg-sts-accent px-6 py-2 text-sm text-sts-bg hover:opacity-90"
+            >
+            {foundingEmail.loading ? "Submitting..." : "Join Early Access"}
           </button>
+
+          {foundingEmail.error && (
+             <p className="mt-2 text-xs text-red-600 text-center">
+               {foundingEmail.error}
+             </p>
+           )}
 
           <p className="mt-3 text-xs text-black/70">Early access to the 15-piece Founding Edition.</p>
         </section>
