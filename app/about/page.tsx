@@ -20,7 +20,7 @@ export default function AboutPage() {
     <main>
       <section className="mx-auto max-w-[980px] px-6 py-10">
         <div className="mt-8 rounded bg-sts-sectionB p-8">
-          <h2 className="text-xl lg:text-4xl text-center">Designed for Real Life. Completed by You.</h2>
+          <h2 className="text-[6vw] sm:text-[2.5vw] text-center">Designed for Real Life. Completed by You.</h2>
 
           <div className="mt-6 space-y-5 text-sm lg:text-[25px] text-black/80 leading-7 lg:leading-11">
             <p>
