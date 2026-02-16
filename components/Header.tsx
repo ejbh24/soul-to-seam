@@ -6,11 +6,13 @@ export function Header({
   imageAlt,
   title,
   imgClassName,
+  navClassName,
 }: {
   imageSrc: string;
   imageAlt: string;
   title?: React.ReactNode;
   imgClassName?: string;
+  navClassName?: string;
 }) {
   return (
     <header className="relative w-full">
@@ -25,7 +27,11 @@ export function Header({
 
       {/* Nav overlay */}
       <div className="absolute top-0 right-0 z-10 pl-6 pr-2 md:pr-6 pt-1 md:pt-6">
-        <nav className="flex items-center gap-3 md:gap-7 text-sm md:text-lg text-black">
+        <nav
+          className={`flex items-center gap-3 md:gap-7 text-sm md:text-lg ${
+            navClassName ?? "text-black"
+          }`}
+        >
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/#studio">From the Studio</Link>

@@ -7,6 +7,7 @@ export default function AboutPage() {
     <Header
       imageSrc="/about_header.jpeg"
       imageAlt="About header"
+      navClassName="text-white"
       title={
         <>
           The Soul Behind
@@ -19,7 +20,7 @@ export default function AboutPage() {
     <main>
       <section className="mx-auto max-w-[980px] px-6 py-10">
         <div className="mt-8 rounded bg-sts-sectionB p-8">
-          <h2 className="text-xl">Designed for Real Life. Completed by You.</h2>
+          <h2 className="text-xl text-center">Designed for Real Life. Completed by You.</h2>
 
           <div className="mt-6 space-y-5 text-sm text-black/80 leading-7">
             <p>
