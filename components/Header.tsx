@@ -41,7 +41,7 @@ export function Header({
       {/* Optional title overlay */}
       {title && (
         <div className="pointer-events-none absolute inset-0 flex items-center px-6">
-          <h1 className="pl-[8vw] pt-[6vw] md:pt-0 sm:pl-160 text-[7vw] sm:text-8xl font-medium leading-tight text-black">
+          <h1 className="pl-[12vw] pt-[6vw] md:pt-0 sm:pl-160 text-[7vw] sm:text-8xl font-medium leading-tight text-black">
             {title}
           </h1>
         </div>
