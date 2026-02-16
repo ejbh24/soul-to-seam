@@ -22,7 +22,7 @@ export default function HomePage() {
     <main>
       {/* Tagline */}
       <div className="w-full bg-sts-sectionA">
-        <Section className="py-6 text-center">
+        <Section className="py-[6vw] md:py-6 text-center">
           <p className="text-[4vw] md:text-[2.5vw] text-black/70">It Doesn’t Stay a Jacket.</p>
         </Section>
       </div>
