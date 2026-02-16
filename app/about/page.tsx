@@ -20,9 +20,9 @@ export default function AboutPage() {
     <main>
       <section className="mx-auto max-w-[980px] px-6 py-10">
         <div className="mt-8 rounded bg-sts-sectionB p-8">
-          <h2 className="text-xl text-center">Designed for Real Life. Completed by You.</h2>
+          <h2 className="text-4xl text-center">Designed for Real Life. Completed by You.</h2>
 
-          <div className="mt-6 space-y-5 text-sm text-black/80 leading-7">
+          <div className="mt-6 space-y-5 text-sm lg:text-[25px] text-black/80 leading-7 lg:leading-11">
             <p>
               Soul to Seam creates adaptable pieces that respond to changing environments and real
               human behavior. The garment is only finished when it is worn, brought to life through
@@ -59,7 +59,7 @@ export default function AboutPage() {
             />
           </div>
 
-          <div className="text-sm text-black/80 leading-7">
+          <div className="text-sm lg:text-[25px] text-black/80 leading-7 lg:leading-11">
             <p className="font-medium text-black">
               Soul to Seam was founded by product designer Anapaula Gutierrez.
             </p>
@@ -72,7 +72,7 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-        <p className="mt-6">
+        <p className="mt-6 text-sm lg:text-[25px] text-black/80 leading-7 lg:leading-11">
           At its core, Soul to Seam is about designing for real life, for movement, transition,
           and self-expression without compromise.
         </p>
