@@ -1,32 +1,45 @@
+import Image from "next/image";
 import Link from "next/link";
 
-const nav = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "From the Studio", href: "/#studio" },
-];
-
-export function Header() {
+export function Header({
+  imageSrc,
+  imageAlt,
+  title,
+  imgClassName,
+}: {
+  imageSrc: string;
+  imageAlt: string;
+  title?: string;
+  imgClassName?: string;
+}) {
   return (
-    <header className="sticky top-0 z-50 bg-sts-bg/90 backdrop-blur border-b border-black/5">
-      <div className="mx-auto max-w-[980px] px-6 py-4">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="h-8 w-20 rounded bg-black/5" aria-hidden />
-            <span className="text-sm tracking-wide text-black/70">Soul to Seam</span>
-          </Link>
+    <header className="relative w-full">
+      <Image
+        src={imageSrc}
+        alt={imageAlt}
+        width={2000}     // any large number (just for Next optimization)
+        height={800}     // match rough aspect ratio of your image
+        priority
+        className={imgClassName ?? "w-full h-auto"}
+      />
 
-          <nav className="flex items-center gap-6 text-sm text-black/70">
-            {nav.map((item) => (
-              <Link key={item.href} href={item.href} className="hover:text-black transition-colors">
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
-
-        <div className="mt-4 rounded bg-black/5 h-16" aria-hidden />
+      {/* Nav overlay */}
+      <div className="absolute top-0 right-0 z-10 px-6 pt-5">
+        <nav className="flex items-center gap-7 text-lg text-black">
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/#studio">From the Studio</Link>
+        </nav>
       </div>
+
+      {/* Optional title overlay */}
+      {title && (
+        <div className="pointer-events-none absolute inset-0 flex items-center px-6">
+          <h1 className="mx-auto w-full max-w-[980px] text-3xl sm:text-5xl font-medium text-white">
+            {title}
+          </h1>
+        </div>
+      )}
     </header>
   );
 }

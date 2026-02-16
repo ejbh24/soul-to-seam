@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Header } from "@/components/Header";
 
 function Section({
   className = "",
@@ -12,6 +13,12 @@ function Section({
 
 export default function HomePage() {
   return (
+    <>
+      <Header
+        imageSrc="/logo.jpeg"
+        imageAlt="Soul to Seam logo"
+        imgClassName="w-full h-[380px] object-fill"
+      />
     <main>
       {/* Tagline */}
       <Section className="pt-10 pb-8 text-center">
@@ -144,6 +151,7 @@ export default function HomePage() {
 
       <div className="h-24" />
     </main>
+    </>
   );
 }
 

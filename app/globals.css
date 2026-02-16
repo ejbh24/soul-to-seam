@@ -2,7 +2,7 @@
 
 :root {
   /* STS base palette */
-  --background: #f5f3ef;
+  --background: #f7f3eb;
   --foreground: #1a1a1a;
 
   --sts-bg: #f5f3ef;
@@ -28,20 +28,9 @@
   --color-sts-accent: var(--sts-accent);
 }
 
-/* Optional: you can keep dark mode later; for now, lock brand look */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #f5f3ef;
-    --foreground: #1a1a1a;
-  }
-}
-
 html,
 body {
   height: 100%;
-}
-
-body {
   background: var(--background);
   color: var(--foreground);
 }
