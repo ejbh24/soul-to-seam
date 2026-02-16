@@ -59,7 +59,7 @@ export default function HomePage() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="group relative h-[24vw] md:h-56 rounded bg-black/10 flex items-center justify-center"
+              className="group relative h-[30vw] md:h-56 rounded bg-black/10 flex items-center justify-center"
             >
               Image {i}
             </div>
