@@ -24,8 +24,8 @@ export function Header({
       />
 
       {/* Nav overlay */}
-      <div className="absolute top-0 right-0 z-10 px-6 pt-2 md:pt-6">
-        <nav className="flex items-center gap-4 md:gap-7 text-lg text-black">
+      <div className="absolute top-0 right-0 z-10 px-6 pt-0 md:pt-6">
+        <nav className="flex items-center gap-3 md:gap-7 text-sm md:text-lg text-black">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/#studio">From the Studio</Link>
