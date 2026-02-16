@@ -59,7 +59,7 @@ export default function HomePage() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="group relative w-[31mw] md:w-full h-[30vw] md:h-56 rounded bg-black/10 flex items-center justify-center"
+              className="group relative w-[32mw] md:w-full h-[32vw] md:h-56 rounded bg-black/10 flex items-center justify-center"
             >
               Image {i}
             </div>
@@ -103,7 +103,7 @@ export default function HomePage() {
             {[1, 2, 3].map((i) => (
               <button
                 key={i}
-                className="group relative w-[31mw] md:w-full h-[45vw] md:h-96 rounded bg-black/10 flex items-center justify-center"
+                className="group relative w-[32mw] md:w-full h-[45vw] md:h-96 rounded bg-black/10 flex items-center justify-center"
                 aria-label={`Studio image ${i}`}
               >
                 <span className="text-black/50 text-sm">Studio {i}</span>
