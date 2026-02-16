@@ -73,10 +73,10 @@ export default function HomePage() {
           <h2 className="text-xl">Outerwear That Carries Itself</h2>
 
           <div className="mt-8 grid grid-cols-2 gap-6">
-             <div className="h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
+             <div className="md:w-full w-[50vw] h-[90vw] md:h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
               Bag form
             </div>
-             <div className="h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
+             <div className="md:w-full w-[50vw] h-[90vw] md:h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
               Jacket form / gif
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function HomePage() {
             {[1, 2, 3].map((i) => (
               <button
                 key={i}
-                className="group relative w-[302mw] md:w-full h-[45vw] md:h-96 rounded bg-black/10 flex items-center justify-center"
+                className="group relative w-[302mw] md:w-full h-[50vw] md:h-96 rounded bg-black/10 flex items-center justify-center"
                 aria-label={`Studio image ${i}`}
               >
                 <span className="text-black/50 text-sm">Studio {i}</span>
