@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Header } from "@/components/Header";
+import { ScrollOnLoad } from "@/components/ScrollOnLoad";
+import { ScrollButton } from "@/components/ScrollButton";
 
 function Section({
   className = "",
@@ -14,6 +16,7 @@ function Section({
 export default function HomePage() {
   return (
     <>
+      <ScrollOnLoad />
       <Header
         imageSrc="/logo.jpeg"
         imageAlt="Soul to Seam logo"
@@ -85,16 +88,19 @@ export default function HomePage() {
             Converts in seconds. Pocket access in both forms. Patent Pending.
           </p>
 
-          <button className="mt-4 w-full rounded-md bg-sts-accent py-3 text-sm text-sts-bg hover:opacity-90">
+          <a href="#early-access" className="mt-4 block w-[85%] mx-auto rounded-md bg-sts-accent py-2 text-sm text-sts-bg text-center">
             Join Early Access
-          </button>
+          </a>
+ 
         </Section>
       </div>
 
       {/* From the Studio */}
       <div id="studio" className="bg-sts-bg scroll-mt-28">
         <Section className="pt-12 pb-14 text-center">
-          <h2 className="text-xl">From The Studio</h2>
+          <h2 className="text-xl">
+            From The Studio
+          </h2>
           <p className="mt-2 text-[3vw] md:text-sm text-black/70">
             The JacketBag, exhibited in leather, denim, and corduroy.
           </p>
@@ -124,7 +130,7 @@ export default function HomePage() {
       </Section>
 
       {/* Founding Edition CTA */}
-      <div className="bg-sts-sectionA">
+      <div id="early-access" className="bg-sts-sectionA scroll-mt-28">
         <Section className="pt-12 pb-14 text-center">
           <h2 className="text-xl">Founding Edition</h2>
           <p className="mt-2 text-sm text-black/70">

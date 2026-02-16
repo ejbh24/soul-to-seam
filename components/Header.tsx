@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ScrollButton } from "@/components/ScrollButton";
 
 export function Header({
   imageSrc,
@@ -34,7 +35,10 @@ export function Header({
         >   
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
-          <Link href="/#studio">From the Studio</Link>
+          <ScrollButton
+            targetId="studio">
+            From the Studio
+          </ScrollButton>
         </nav>
       </div>
 
