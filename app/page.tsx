@@ -55,7 +55,7 @@ export default function HomePage() {
         <h2 className="text-xl">The jacket problem.</h2>
         <p className="mt-2 text-sm text-black/70">Once you don’t need it, you’re still left carrying it.</p>
 
-        <div className="mt-8 grid grid-cols-3 gap-[1vw] md:gap-6">
+        <div className="mt-8 grid grid-cols-3 gap-[2vw] md:gap-6">
           {[1, 2, 3].map((i) => (
             <div
               key={i}
@@ -99,7 +99,7 @@ export default function HomePage() {
             The JacketBag, exhibited in leather, denim, and corduroy.
           </p>
 
-          <div className="mt-8 grid grid-cols-3 gap-[1vw] md:gap-6">
+          <div className="mt-8 grid grid-cols-3 gap-[2vw] md:gap-6">
             {[1, 2, 3].map((i) => (
               <button
                 key={i}
