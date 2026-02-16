@@ -39,7 +39,7 @@ export default function HomePage() {
         </div>
 
         <p className="mt-8 text-center text-[2.5vw] md:text-sm text-black/70">
-          A patent-pending design that transforms into a structured carry.
+          A patent-pending design that transforms into a structured carry. Hi!
         </p>
 
         <div className="mt-4 flex items-center justify-center gap-3">
