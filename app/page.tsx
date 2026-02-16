@@ -73,10 +73,10 @@ export default function HomePage() {
           <h2 className="text-xl">Outerwear That Carries Itself</h2>
 
           <div className="mt-8 grid grid-cols-2 gap-[2.5vw] md:gap-6">
-             <div className="md:w-full w-[37vw] h-[65vw] md:h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
+             <div className="md:w-full h-[65vw] md:h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
               Bag form
             </div>
-             <div className="md:w-full w-[37vw] h-[65vw] md:h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
+             <div className="md:w-full h-[65vw] md:h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
               Jacket form / gif
             </div>
           </div>
