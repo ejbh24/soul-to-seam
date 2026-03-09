@@ -129,7 +129,7 @@ export default function HomePage() {
           <h2 className="text-xl">Outerwear That Carries Itself</h2>
 
           <div className="mt-8 flex justify-center">
-            <div className="w-[85%] md:w-[50vh] max-w-[720px] h-[115vw] md:h-[80vh] rounded overflow-hidden bg-black/10">
+            <div className="w-[85%] md:w-[50vh] max-w-[720px] h-[115vw] md:h-[78vh] rounded overflow-hidden bg-black/10">
               <video
                 className="w-full h-full object-cover"
                 autoPlay
