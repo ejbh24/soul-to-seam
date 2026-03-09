@@ -158,6 +158,14 @@ export default function HomePage() {
           Soul to Seam is a design-led brand creating adaptable, functional products that reduce friction in everyday life,
           completed through the identity and expression of the wearer.
         </p>
+          <Image
+            src="/heart_logo.png"
+            alt="Two models wearing jackets"
+            width={300}
+            height={300}
+            priority
+            className="mx-auto"
+          />
       </Section>
 
       {/* Founding Edition CTA */}
