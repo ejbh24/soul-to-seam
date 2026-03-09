@@ -3,6 +3,7 @@
 import { Header } from "@/components/Header";
 import Image from "next/image";
 import { useEmailCapture } from "@/components/useEmailCapture";
+import { FaFacebookF, FaInstagram, FaTiktok, FaLinkedinIn } from "react-icons/fa";
 
 export default function AboutPage() {
   const foundingEmail = useEmailCapture("about-founding");
@@ -87,7 +88,7 @@ export default function AboutPage() {
         <section className="mx-auto max-w-[980px] px-6 py-14 text-center">
           <h2 className="text-xl">Founding Edition</h2>
           <p className="mt-2 text-sm text-black/70">The debut of the JacketBag. <br /> 15 pieces handmade by the founder.</p>
-          <p className="mt-3 text-xs text-black/70">Patent Pending · $245</p>
+          <p className="mt-3 text-xs text-black/70">Patent Pending · Starting at $245</p>
 
           <div className="mt-6 flex items-center justify-center">
             <input
@@ -116,7 +117,52 @@ export default function AboutPage() {
           <p className="mt-3 text-xs text-black/70">Early access to the 15-piece Founding Edition.</p>
         </section>
       </div>
+      <div className="w-full border-t border-black/10 bg-[#f3f1ed]">
+        <section className="mx-auto max-w-[980px] px-6 pt-20">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-28 text-center">
 
+            <div className="flex flex-col items-center">
+              <h3 className="text-[28px] font-normal tracking-[0.02em] text-black">
+                SOCIALS
+              </h3>
+
+              <div className="mt-6 flex items-center gap-6 text-[44px] text-black/45">
+                <FaFacebookF />
+                <FaInstagram />
+                <FaTiktok />
+                <FaLinkedinIn />
+              </div>
+
+              <p className="mt-4 text-[18px] text-black/80">
+                @soultoseam
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <h3 className="text-[28px] font-normal tracking-[0.02em] text-black">
+                DISCOVER
+              </h3>
+
+              <div className="mt-6 space-y-3 text-[18px] text-black/85">
+                <p>How It Works</p>
+                <p>Brand Philosophy</p>
+                <p>About</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center">
+              <h3 className="text-[28px] font-normal tracking-[0.02em] text-black">
+                CONTACT US
+              </h3>
+
+              <p className="mt-6 text-[18px] text-black/85">
+                info@soultoseam
+              </p>
+            </div>
+
+          </div>
+        </section>
+      </div>
       <div className="h-24" />
     </main>
     {foundingEmail.showThanks && (
@@ -149,4 +195,3 @@ export default function AboutPage() {
     </>
   );
 }
-
