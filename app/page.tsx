@@ -15,6 +15,12 @@ const quadrantImages = [
   { src: "/quadrant_d.png", alt: "Bottom right jacket problem image" },
 ];
 
+const studioImages = [
+  { src: "/solo1.png", alt: "Leather JacketBag" },
+  { src: "/solo2.png", alt: "Denim JacketBag" },
+  { src: "/solo3.png", alt: "Corduroy JacketBag" },
+];
+
 function Section({
   className = "",
   children,
@@ -151,16 +157,23 @@ export default function HomePage() {
           <p className="mt-2 text-[3vw] md:text-sm text-black/70">
             The JacketBag, exhibited in leather, denim, and corduroy.
           </p>
-
           <div className="mt-8 grid grid-cols-3 gap-[2.5vw] md:gap-6">
-            {[1, 2, 3].map((i) => (
+            {studioImages.map((image, i) => (
               <button
                 key={i}
-                className="group relative w-[302mw] md:w-full h-[50vw] md:h-96 rounded bg-black/10 flex items-center justify-center"
-                aria-label={`Studio image ${i}`}
+                className="group relative w-[302mw] md:w-full h-[50vw] md:h-96 rounded overflow-hidden"
+                aria-label={`Studio image ${i + 1}`}
               >
-                <span className="text-black/50 text-sm">Studio {i}</span>
-                <span className="absolute right-3 top-3 opacity-60 group-hover:opacity-100">↗</span>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                />
+
+                <span className="absolute right-3 top-3 opacity-60 group-hover:opacity-100">
+                  ↗
+                </span>
               </button>
             ))}
           </div>
