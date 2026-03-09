@@ -42,7 +42,7 @@ export default function HomePage() {
 
       {/* Hero image placeholder */}
       <Section className="pb-10">
-        <div className="mx-auto w-[67vw] md:w-[31.5vw] h-[84vw] md:h-[45vw] rounded bg-black/10 flex items-center justify-center">
+        <div className="mx-auto w-[66vw] md:w-[31.5vw] h-[84vw] md:h-[45vw] rounded bg-black/10 flex items-center justify-center">
           <Image
             src="/2_models.heic"
             alt="Two models wearing jackets"
