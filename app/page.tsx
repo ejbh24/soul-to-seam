@@ -99,7 +99,7 @@ export default function HomePage() {
         </p>
 
         <div className="mt-8 flex justify-center">
-          <div className="grid grid-cols-2 gap-[2.5vw] gap-x-1.5 gap-y-4 w-[600px] mx-auto">
+          <div className="grid grid-cols-2 gap-[2.5vw] gap-x-[0.5%] gap-y-[5.5%] w-[600px] mx-auto">
             {quadrantImages.map((image) => (
               <div
                 key={image.src}
