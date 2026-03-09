@@ -8,6 +8,13 @@ import { ScrollOnLoad } from "@/components/ScrollOnLoad";
 import { useEmailCapture } from "@/components/useEmailCapture"
 import { FaFacebookF, FaInstagram, FaTiktok, FaLinkedinIn } from "react-icons/fa";
 
+const quadrantImages = [
+  { src: "/quadrant_a.png", alt: "Top left jacket problem image" },
+  { src: "/quadrant_b.png", alt: "Top right jacket problem image" },
+  { src: "/quadrant_c.png", alt: "Bottom left jacket problem image" },
+  { src: "/quadrant_d.png", alt: "Bottom right jacket problem image" },
+];
+
 function Section({
   className = "",
   children,
@@ -87,17 +94,26 @@ export default function HomePage() {
       {/* Jacket problem */}
       <Section className="pt-12 pb-12 text-center">
         <h2 className="text-xl">The jacket problem.</h2>
-        <p className="mt-2 text-sm text-black/70">Once you don’t need it, you’re still left carrying it.</p>
+        <p className="mt-2 text-sm text-black/70">
+          Once you don’t need it, you’re still left carrying it.
+        </p>
 
-        <div className="mt-8 grid grid-cols-3 gap-[2.5vw] md:gap-6">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="group relative w-[30mw] md:w-full h-[30vw] md:h-56 rounded bg-black/10 flex items-center justify-center"
-            >
-              Image {i}
-            </div>
-          ))}
+        <div className="mt-8 flex justify-center">
+          <div className="grid grid-cols-2 gap-[2.5vw] gap-x-1.5 gap-y-4 w-[600px] mx-auto">
+            {quadrantImages.map((image) => (
+              <div
+                key={image.src}
+                className="group relative w-[93%] mx-auto aspect-[5/6] rounded overflow-hidden"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
