@@ -45,7 +45,7 @@ export default function HomePage() {
       <Section className="pb-10">
         <div className="mx-auto w-[59vw] md:w-[31.5vw] h-[84vw] md:h-[45vw] rounded bg-black/10 flex items-center justify-center">
           <Image
-            src="/2_models.heic"
+            src="/2_models.png"
             alt="Two models wearing jackets"
             width={1200}
             height={1600}
