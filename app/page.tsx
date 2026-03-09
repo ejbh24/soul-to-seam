@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Suspense } from "react";
 import { Header } from "@/components/Header";
 import { ScrollOnLoad } from "@/components/ScrollOnLoad";
@@ -41,8 +42,15 @@ export default function HomePage() {
 
       {/* Hero image placeholder */}
       <Section className="pb-10">
-        <div className="mx-auto w-[67vw] md:w-[40vw] h-[84vw] md:h-[45vw] rounded bg-black/10 flex items-center justify-center">
-          <span className="text-black/50">Hero Shot / Main Pic</span>
+        <div className="mx-auto w-[67vw] md:w-[31.5vw] h-[84vw] md:h-[45vw] rounded bg-black/10 flex items-center justify-center">
+          <Image
+            src="/2_models.heic"
+            alt="Two models wearing jackets"
+            width={1200}
+            height={1600}
+            priority
+            className="w-full h-full object-contain"
+          />
         </div>
 
         <p className="mt-8 text-center text-[2.5vw] md:text-sm text-black/70">
