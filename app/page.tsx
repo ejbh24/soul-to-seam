@@ -128,12 +128,17 @@ export default function HomePage() {
         <Section className="pt-12 pb-14 text-center">
           <h2 className="text-xl">Outerwear That Carries Itself</h2>
 
-          <div className="mt-8 grid grid-cols-2 gap-[2.5vw] md:gap-6">
-             <div className="md:w-full h-[65vw] md:h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
-              Bag form
-            </div>
-             <div className="md:w-full h-[65vw] md:h-[600px] rounded bg-black/10 flex items-center justify-center text-black/50 text-sm">
-              Jacket form / gif
+          <div className="mt-8 flex justify-center">
+            <div className="w-full max-w-[720px] h-[70vw] md:h-[650px] rounded overflow-hidden bg-black/10">
+              <video
+                className="w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source src="/conversion.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
 
