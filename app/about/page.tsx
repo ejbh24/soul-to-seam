@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import Image from "next/image";
 import { useEmailCapture } from "@/components/useEmailCapture";
 import { FaFacebookF, FaInstagram, FaTiktok, FaLinkedinIn } from "react-icons/fa";
+import { CrossPageScrollButton } from "@/components/CrossPageScrollButton";
 
 export default function AboutPage() {
   const foundingEmail = useEmailCapture("about-founding");
@@ -140,21 +141,19 @@ export default function AboutPage() {
               </h3>
 
               <div className="mt-6 space-y-3 text-[18px] text-black/85">
-                <button
-                  type="button"
-                  onClick={() => window.location.assign("/?section=how-it-works")}
-                  className="block w-full text-center hover:underline"
-                >
-                  How It Works
-                </button>
+              <CrossPageScrollButton
+                target="how-it-works"
+                className="block w-full text-center hover:underline"
+              >
+                How It Works
+              </CrossPageScrollButton>
 
-                <button
-                  type="button"
-                  onClick={() => window.location.assign("/?section=brand-philosophy")}
-                  className="block w-full text-center hover:underline"
-                >
-                  Brand Philosophy
-                </button>
+              <CrossPageScrollButton
+                target="brand-philosophy"
+                className="block w-full text-center hover:underline"
+              >
+                Brand Philosophy
+              </CrossPageScrollButton>
 
                 <button
                   type="button"

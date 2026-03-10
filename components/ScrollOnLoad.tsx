@@ -12,14 +12,17 @@ export function ScrollOnLoad() {
     }
 
     const section = searchParams.get("section");
+    const hash = window.location.hash.replace("#", "");
+    const target = section || hash;
 
-    if (section) {
+    if (target) {
       requestAnimationFrame(() => {
-        document.getElementById(section)?.scrollIntoView({
+        document.getElementById(target)?.scrollIntoView({
           behavior: "smooth",
           block: "start",
         });
 
+        // removes ?section=... or #...
         window.history.replaceState({}, "", window.location.pathname);
       });
       return;
