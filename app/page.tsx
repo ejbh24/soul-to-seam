@@ -124,9 +124,11 @@ export default function HomePage() {
       </Section>
 
       {/* Outerwear that carries itself */}
-      <div id="how-it-works" className="bg-sts-bg scroll-mt-20">
+      <div className="bg-sts-bg">
         <Section className="pt-12 pb-14 text-center">
-          <h2 className="text-xl">Outerwear That Carries Itself</h2>
+          <h2 id="how-it-works" className="text-xl">
+            Outerwear That Carries Itself
+          </h2>
 
           <div className="mt-8 flex justify-center">
             <div className="w-[85%] md:w-[50vh] max-w-[720px] h-[115vw] md:h-[78vh] rounded overflow-hidden bg-black/10">
