@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { ScrollButton } from "@/components/ScrollButton";
 import { Header } from "@/components/Header";
 import Image from "next/image";
 import { useEmailCapture } from "@/components/useEmailCapture";
@@ -13,6 +15,7 @@ export default function AboutPage() {
       imageSrc="/about_header.jpeg"
       imageAlt="About header"
       navClassName="text-white"
+      studioHref="/?section=studio"
       title={
         <>
           The Soul Behind
@@ -144,9 +147,29 @@ export default function AboutPage() {
               </h3>
 
               <div className="mt-6 space-y-3 text-[18px] text-black/85">
-                <p>How It Works</p>
-                <p>Brand Philosophy</p>
-                <p>About</p>
+                <button
+                  type="button"
+                  onClick={() => window.location.assign("/?section=how-it-works")}
+                  className="block w-full text-center hover:underline"
+                >
+                  How It Works
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => window.location.assign("/?section=brand-philosophy")}
+                  className="block w-full text-center hover:underline"
+                >
+                  Brand Philosophy
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className="block w-full text-center hover:underline"
+                >
+                  About
+                </button>
               </div>
             </div>
 

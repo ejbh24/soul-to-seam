@@ -8,12 +8,14 @@ export function Header({
   title,
   imgClassName,
   navClassName,
+  studioHref,
 }: {
   imageSrc: string;
   imageAlt: string;
   title?: React.ReactNode;
   imgClassName?: string;
   navClassName?: string;
+  studioHref?: string;
 }) {
   return (
     <header className="relative w-full">
@@ -35,10 +37,13 @@ export function Header({
         >   
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
-          <ScrollButton
-            targetId="studio">
-            From the Studio
-          </ScrollButton>
+          {studioHref ? (
+            <Link href={studioHref}>From the Studio</Link>
+          ) : (
+            <ScrollButton targetId="studio">
+              From the Studio
+            </ScrollButton>
+          )}
         </nav>
       </div>
 
