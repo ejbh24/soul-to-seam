@@ -1,19 +1,27 @@
 "use client";
 
 import { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 export function ScrollOnLoad() {
-  useEffect(() => {
-    // stop browser from restoring old scroll position on refresh
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
+  const searchParams = useSearchParams();
 
-    // force page to top on load
+  useEffect(() => {
+    const section = searchParams.get("section");
+    if (!section) return;
+
+    // Wait for DOM paint
     requestAnimationFrame(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      document.getElementById(section)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+      // Clean URL back to "/" so refresh doesn't stick
+      window.history.replaceState({}, "", "/");
     });
-  }, []);
+  }, [searchParams]);
 
   return null;
 }
+
