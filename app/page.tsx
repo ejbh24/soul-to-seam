@@ -172,11 +172,11 @@ export default function HomePage() {
           <p className="mt-2 text-[3vw] md:text-sm text-black/70">
             The JacketBag, exhibited in leather, denim, and corduroy.
           </p>
-          <div className="mt-8 grid grid-cols-3 gap-[2.5vw] md:gap-6">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6">
             {studioImages.map((image, i) => (
               <button
                 key={i}
-                className="group relative w-[302mw] md:w-full h-[50vw] md:h-96 rounded overflow-hidden"
+                className="group relative w-full h-[90vw] md:h-96 rounded overflow-hidden"
                 aria-label={`Studio image ${i + 1}`}
               >
                 <Image
