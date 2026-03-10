@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { ScrollButton } from "@/components/ScrollButton";
 import { Header } from "@/components/Header";
 import Image from "next/image";
 import { useEmailCapture } from "@/components/useEmailCapture";
@@ -57,6 +55,7 @@ export default function AboutPage() {
               src="/graduation_pic.jpg"
               alt="Anapaula Gutierrez"
               fill
+              loading="eager"
               className="object-cover"
             />
           </div>

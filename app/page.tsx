@@ -118,6 +118,7 @@ export default function HomePage() {
                   src={image.src}
                   alt={image.alt}
                   fill
+                  loading="eager"
                   className="object-cover"
                 />
               </div>
@@ -186,6 +187,7 @@ export default function HomePage() {
                   src={image.src}
                   alt={image.alt}
                   fill
+                  loading="eager"
                   className="object-cover"
                 />
 
