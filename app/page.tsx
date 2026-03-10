@@ -205,8 +205,8 @@ export default function HomePage() {
           <Image
             src="/heart_logo.png"
             alt="Two models wearing jackets"
-            width={300}
-            height={300}
+            width={257}
+            height={257}
             priority
             className="mx-auto"
           />
