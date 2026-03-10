@@ -80,13 +80,13 @@ export default function HomePage() {
             onChange={(e) => heroEmail.setEmail(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && heroEmail.submit()}
             placeholder="Email"
-            className="w-[420px] max-w-[65vw] rounded-md border border-black/10 bg-white px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sts-accent/40"
+            className="w-[420px] max-w-[55vw] md:max-w-[65vw] rounded-md border border-black/10 bg-white px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sts-accent/40"
           />
 
           <button
            onClick={heroEmail.submit}
            disabled={heroEmail.loading}
-           className="w-[90vw] md:w-auto rounded-md bg-sts-accent px-4 py-2 text-[2.5vw] md:text-sm text-sts-bg hover:opacity-90"
+           className="w-[60vw] md:w-auto rounded-md bg-sts-accent px-4 py-2 text-[2.5vw] md:text-sm text-sts-bg hover:opacity-90"
           >
             {heroEmail.loading ? "Submitting..." : "JOIN EARLY ACCESS"}
           </button>
