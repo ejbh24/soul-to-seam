@@ -80,7 +80,7 @@ export default function HomePage() {
             onChange={(e) => heroEmail.setEmail(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && heroEmail.submit()}
             placeholder="Email"
-            className="w-[420px] max-w-[42vw] md:max-w-[65vw] rounded-md border border-black/10 bg-white px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sts-accent/40"
+            className="w-[420px] max-w-[48vw] md:max-w-[65vw] rounded-md border border-black/10 bg-white px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sts-accent/40"
           />
 
           <button
