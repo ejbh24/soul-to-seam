@@ -12,17 +12,10 @@ export default function AboutPage() {
   return (
     <>
     <Header
-      imageSrc="/about_header.jpeg"
+      imageSrc="/header_2.png"
       imageAlt="About header"
       navClassName="text-white"
       studioHref="/?section=studio"
-      title={
-        <>
-          The Soul Behind
-          <br />
-          the Seam
-        </>
-      }
       imgClassName="w-full h-fill object-fill"
     />
     <main>

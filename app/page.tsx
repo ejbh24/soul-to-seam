@@ -40,7 +40,7 @@ export default function HomePage() {
         <ScrollOnLoad />
       </Suspense>
       <Header
-        imageSrc="/logo.jpeg"
+        imageSrc="/header_1.png"
         imageAlt="Soul to Seam logo"
         imgClassName="w-full h-full object-fill"
       />
