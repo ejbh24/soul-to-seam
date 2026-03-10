@@ -176,7 +176,7 @@ export default function HomePage() {
             {studioImages.map((image, i) => (
               <button
                 key={i}
-                className="group relative w-[60%] md:w-full mx-auto h-[90vw] md:h-96 rounded overflow-hidden"
+                className="group relative w-[70%] md:w-full mx-auto h-[90vw] md:h-96 rounded overflow-hidden"
                 aria-label={`Studio image ${i + 1}`}
               >
                 <Image
