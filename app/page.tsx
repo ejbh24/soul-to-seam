@@ -78,7 +78,7 @@ export default function HomePage() {
           />
         </div>
 
-        <p className="mt-8 text-center text-[1.45rem] text-black/70">
+        <p className="mt-8 text-center text-[1.05rem] md:text-[1.525rem] text-black/70">
           A patent-pending design that transforms into a structured carry.
         </p>
 
