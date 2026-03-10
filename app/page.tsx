@@ -146,12 +146,17 @@ export default function HomePage() {
             Converts in seconds. Pocket access in both forms. Patent Pending.
           </p>
 
-          <Link
-            href="/?section=early-access"
+          <button
+            onClick={() =>
+              document.getElementById("early-access")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              })
+            }
             className="mt-4 block w-[85%] mx-auto rounded-md bg-sts-accent py-2 text-sm text-sts-bg text-center"
           >
             Join Early Access
-          </Link>
+          </button>
  
         </Section>
       </div>
@@ -276,12 +281,28 @@ export default function HomePage() {
               </h3>
 
               <div className="mt-6 space-y-3 text-[18px] text-black/85">
-                <Link href="/?section=how-it-works" className="block hover:underline">
+                <button
+                  onClick={() =>
+                    document.getElementById("how-it-works")?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    })
+                  }
+                  className="block w-full text-center hover:underline"
+                >
                   How It Works
-                </Link>
-                <Link href="/?section=brand-philosophy" className="block hover:underline">
+                </button>
+                <button
+                  onClick={() =>
+                    document.getElementById("brand-philosophy")?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    })
+                  }
+                  className="block w-full text-center hover:underline"
+                >
                   Brand Philosophy
-                </Link>
+                </button>
                 <Link href="/about" className="block hover:underline">
                   About
                 </Link>
