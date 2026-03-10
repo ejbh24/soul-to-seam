@@ -186,7 +186,7 @@ export default function HomePage() {
                   className="object-cover"
                 />
 
-                <span className="absolute top-1/2 -translate-y-1/2 left-[calc(100%+10px)] md:left-1/2 md:top-[calc(100%+10px)] md:-translate-x-1/2 md:translate-y-0 opacity-60 group-hover:opacity-100">
+                <span className="absolute top-1/2 -translate-y-1/2 left-[calc(100%+10px)] md:left-1/2 md:top-[calc(100%+10px)] md:-translate-x-1/2 md:translate-y-0 opacity-60 group-hover:opacity-100 text-2xl">
                   →
                 </span>
               </button>
