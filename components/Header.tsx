@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollButton } from "@/components/ScrollButton";
+import { CrossPageScrollButton } from "@/components/CrossPageScrollButton";
 
 export function Header({
   imageSrc,
@@ -9,6 +10,7 @@ export function Header({
   imgClassName,
   navClassName,
   studioHref,
+  studioTarget,
 }: {
   imageSrc: string;
   imageAlt: string;
@@ -16,6 +18,7 @@ export function Header({
   imgClassName?: string;
   navClassName?: string;
   studioHref?: string;
+  studioTarget?: string;
 }) {
   return (
     <header className="relative w-full">
@@ -37,7 +40,11 @@ export function Header({
         >   
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
-          {studioHref ? (
+          {studioTarget ? (
+            <CrossPageScrollButton target={studioTarget}>
+              From the Studio
+            </CrossPageScrollButton>
+          ) : studioHref ? (
             <Link href={studioHref}>From the Studio</Link>
           ) : (
             <ScrollButton targetId="studio">

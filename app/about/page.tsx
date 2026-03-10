@@ -16,7 +16,7 @@ export default function AboutPage() {
       imageSrc="/header_2.jpeg"
       imageAlt="About header"
       navClassName="text-white"
-      studioHref="/?section=studio"
+      studioTarget="studio"
       imgClassName="w-full h-fill object-fill"
     />
     <main>

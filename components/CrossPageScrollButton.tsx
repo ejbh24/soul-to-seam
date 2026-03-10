@@ -10,11 +10,12 @@ export function CrossPageScrollButton({
   className?: string;
 }) {
   const handleClick = () => {
-    window.location.href = `/?section=${target}`;
+    sessionStorage.setItem("cross-page-scroll-target", target);
+    window.location.href = "/";
   };
 
   return (
-    <button onClick={handleClick} className={className}>
+    <button type="button" onClick={handleClick} className={className}>
       {children}
     </button>
   );

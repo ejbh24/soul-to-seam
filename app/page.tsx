@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { CrossPageScrollOnLoad } from "@/components/CrossPageScrollOnLoad";
 import Image from "next/image";
 import { Suspense } from "react";
 import { Header } from "@/components/Header";
@@ -39,6 +40,8 @@ export default function HomePage() {
       <Suspense fallback={null}>
         <ScrollOnLoad />
       </Suspense>
+      <CrossPageScrollOnLoad />
+
       <Header
         imageSrc="/header_1.jpeg"
         imageAlt="Soul to Seam logo"
