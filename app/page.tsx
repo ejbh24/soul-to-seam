@@ -86,7 +86,7 @@ export default function HomePage() {
           <button
            onClick={heroEmail.submit}
            disabled={heroEmail.loading}
-           className="w-[60vw] md:w-auto rounded-md bg-sts-accent px-4 py-2 text-[2.5vw] md:text-sm text-sts-bg hover:opacity-90"
+           className="w-[58vw] md:w-auto rounded-md bg-sts-accent px-4 py-2 text-[2.5vw] md:text-sm text-sts-bg hover:opacity-90"
           >
             {heroEmail.loading ? "Submitting..." : "JOIN EARLY ACCESS"}
           </button>
