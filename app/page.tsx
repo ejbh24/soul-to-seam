@@ -176,7 +176,7 @@ export default function HomePage() {
             {studioImages.map((image, i) => (
               <button
                 key={i}
-                className="group relative w-[70%] md:w-full mx-auto h-[90vw] md:h-96 rounded overflow-hidden"
+                className="group relative w-[70%] md:w-full mx-auto h-[90vw] md:h-96 rounded"
                 aria-label={`Studio image ${i + 1}`}
               >
                 <Image
@@ -186,8 +186,8 @@ export default function HomePage() {
                   className="object-cover"
                 />
 
-                <span className="absolute right-3 top-3 opacity-60 group-hover:opacity-100">
-                  ↗
+                <span className="absolute top-1/2 -translate-y-1/2 left-[calc(100%+10px)] md:left-1/2 md:top-[calc(100%+10px)] md:-translate-x-1/2 md:translate-y-0 opacity-60 group-hover:opacity-100">
+                  →
                 </span>
               </button>
             ))}
