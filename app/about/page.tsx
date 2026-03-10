@@ -26,7 +26,7 @@ export default function AboutPage() {
     <main>
       <section className="mx-auto max-w-[980px] px-6 py-10">
         <div className="mt-8 rounded bg-sts-sectionB p-8">
-          <h2 className={`${playfair.className} text-[2.725rem] text-center`}>Designed for Real Life. Completed by You.</h2>
+          <h2 className={`${playfair.className} text-[2rem] md:text-[2.725rem] text-center`}>Designed for Real Life. Completed by You.</h2>
 
           <div className="mt-6 space-y-5 text-sm lg:text-[25px] text-black/80 leading-7 lg:leading-11">
             <p>
@@ -88,9 +88,9 @@ export default function AboutPage() {
       {/* Founding Edition CTA repeat */}
       <div className="bg-sts-sectionA">
         <section className="mx-auto max-w-[980px] px-6 py-14 text-center">
-          <h2 className={`${playfair.className} text-[2.725rem]`}> The Founding Edition</h2>
-          <p className="mt-2 text-[1.525rem] text-black/70">The debut of the JacketBag. <br /> 15 pieces handmade by the founder.</p>
-          <p className="mt-3 text-[1.525rem] text-black/70">Patent Pending · Starting at $245</p>
+          <h2 className={`${playfair.className} text-[2rem] md:text-[2.725rem]`}> The Founding Edition</h2>
+          <p className="mt-2 text-[1.2rem] md:text-[1.525rem] text-black/70">The debut of the JacketBag. <br /> 15 pieces handmade by the founder.</p>
+          <p className="mt-3 text-[1.2rem] md:text-[1.525rem] text-black/70">Patent Pending · Starting at $245</p>
 
           <div className="mt-6 flex items-center justify-center">
             <input
@@ -116,7 +116,7 @@ export default function AboutPage() {
              </p>
            )}
 
-          <p className="mt-3 text-[1.525rem] text-black/70">Early access to the 15-piece Founding Edition.</p>
+          <p className="mt-3 text-[1.2rem] md:text-[1.525rem] text-black/70">Early access to the 15-piece Founding Edition.</p>
         </section>
       </div>
       <div className="w-full border-t border-black/10 bg-[#f3f1ed]">

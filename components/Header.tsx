@@ -38,17 +38,17 @@ export function Header({
              navClassName ?? "text-black"
           }`}
         >   
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
+          <Link href="/">HOME</Link>
+          <Link href="/about">ABOUT</Link>
           {studioTarget ? (
             <CrossPageScrollButton target={studioTarget}>
-              From the Studio
+              FROM THE STUDIO
             </CrossPageScrollButton>
           ) : studioHref ? (
             <Link href={studioHref}>From the Studio</Link>
           ) : (
             <ScrollButton targetId="studio">
-              From the Studio
+              FROM THE STUDIO
             </ScrollButton>
           )}
         </nav>

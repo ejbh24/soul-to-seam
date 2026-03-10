@@ -57,7 +57,7 @@ export default function HomePage() {
       {/* Tagline */}
       <div className="w-full bg-sts-sectionA">
         <Section className="py-[3.5vw] md:py-6 text-center">
-          <p className={`${playfair.className} text-[2.725rem] text-black/70`}>
+          <p className={`${playfair.className} text-[2rem] md:text-[2.725rem] text-black/70`}>
           It Doesn’t Stay a Jacket.
           </p>
         </Section>
@@ -110,10 +110,10 @@ export default function HomePage() {
 
       {/* Jacket problem */}
       <Section className="pt-12 pb-12 text-center">
-        <h2 className={`${playfair.className} text-[2.725rem]`}>
+        <h2 className={`${playfair.className} text-[2rem] md:text-[2.725rem]`}>
           The jacket problem.
         </h2>
-        <p className="mt-2 text-[1.525rem] text-black/70">
+        <p className="mt-2 text-[1.2rem] md:text-[1.525rem] text-black/70">
           Once you don’t need it, you’re still left carrying it.
         </p>
 
@@ -140,7 +140,7 @@ export default function HomePage() {
       {/* Outerwear that carries itself */}
       <div className="bg-sts-bg">
         <Section className="pt-12 pb-14 text-center">
-          <h2 id="how-it-works" className={`${playfair.className} text-[2.725rem]`}>
+          <h2 id="how-it-works" className={`${playfair.className} text-[2rem] md:text-[2.725rem]`}>
             Outerwear That Carries Itself
           </h2>
 
@@ -158,7 +158,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <p className="mt-6 text-[1.525rem] text-black/70">
+          <p className="mt-6 text-[1.2rem] md:text-[1.525rem] text-black/70">
             Converts in seconds. Pocket access in both forms. Patent Pending.
           </p>
 
@@ -180,10 +180,10 @@ export default function HomePage() {
       {/* From the Studio */}
       <div id="studio" className="bg-sts-bg">
         <Section className="pt-12 pb-14 text-center">
-          <h2 className={`${playfair.className} text-[2.725rem]`}>
+          <h2 className={`${playfair.className} text-[2rem] md:text-[2.725rem]`}>
             From The Studio
           </h2>
-          <p className="mt-2 text-[1.525rem] text-black/70">
+          <p className="mt-2 text-[1.2rem] md:text-[1.525rem] text-black/70">
             The JacketBag, exhibited in leather, denim, and corduroy.
           </p>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6">
@@ -212,8 +212,8 @@ export default function HomePage() {
 
       {/* Designed for Real Life */}
       <Section className="pt-12 pb-12 text-center">
-        <h2 id="brand-philosophy" className={`${playfair.className} text-[2.725rem]`}>Designed for Real Life. Completed by You.</h2>
-        <p className="mx-auto mt-4 max-w-[760px] text-[1.525rem] text-black/70">
+        <h2 id="brand-philosophy" className={`${playfair.className} text-[2rem] md:text-[2.725rem]`}>Designed for Real Life. Completed by You.</h2>
+        <p className="mx-auto mt-4 max-w-[760px] text-[1.2rem] md:text-[1.525rem] text-black/70">
           Soul to Seam is a design-led brand creating adaptable, functional products that reduce friction in everyday life,
           completed through the identity and expression of the wearer.
         </p>
@@ -230,11 +230,11 @@ export default function HomePage() {
       {/* Founding Edition CTA */}
       <div id="early-access" className="bg-sts-sectionA scroll-mt-28">
         <Section className="pt-12 pb-14 text-center">
-          <h2 className={`${playfair.className} text-[2.725rem]`}>Founding Edition</h2>
-          <p className="mt-2 text-[1.525rem] text-black/70">
+          <h2 className={`${playfair.className} text-[2rem] md:text-[2.725rem]`}>Founding Edition</h2>
+          <p className="mt-2 text-[1.2rem] md:text-[1.525rem] text-black/70">
             The debut of the JacketBag. <br /> 15 pieces handmade by the founder.
           </p>
-          <p className="mt-3 text-[1.525rem]  text-black/70">Patent Pending · Starting at $245</p>
+          <p className="mt-3 text-[1.2rem] md:text-[1.525rem] text-black/70">Patent Pending · Starting at $245</p>
 
           <div className="mt-6 flex flex-col items-center justify-center">
             <div className="flex items-center justify-center gap-3">
@@ -262,7 +262,7 @@ export default function HomePage() {
            </button>
          </div>
  
-          <p className="mt-3 text-[1.525rem] text-black/70">Early access to the 15-piece Founding Edition.</p>
+          <p className="mt-3 text-[1.2rem] md:text-[1.525rem] text-black/70">Early access to the 15-piece Founding Edition.</p>
 
           <div className="mt-10">
             <Link href="/about" className="text-[1rem]  text-black/70 underline hover:text-black">
