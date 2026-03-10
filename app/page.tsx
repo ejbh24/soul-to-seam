@@ -167,7 +167,7 @@ export default function HomePage() {
       </div>
 
       {/* From the Studio */}
-      <div id="studio" className="bg-sts-bg scroll-mt-28">
+      <div id="studio" className="bg-sts-bg">
         <Section className="pt-12 pb-14 text-center">
           <h2 className="text-xl">
             From The Studio
