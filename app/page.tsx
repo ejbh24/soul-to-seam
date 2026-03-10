@@ -85,7 +85,7 @@ export default function HomePage() {
            disabled={heroEmail.loading}
            className="rounded-md bg-sts-accent px-4 py-2 text-[2.5vw] md:text-sm text-sts-bg hover:opacity-90"
           >
-            {heroEmail.loading ? "Submitting..." : "Join Early Access"}
+            {heroEmail.loading ? "Submitting..." : "JOIN EARLY ACCESS"}
           </button>
         </div>
 
@@ -157,7 +157,7 @@ export default function HomePage() {
             }
             className="mt-4 block w-[85%] mx-auto rounded-md bg-sts-accent py-2 text-sm text-sts-bg text-center"
           >
-            Join Early Access
+            JOIN EARLY ACCESS
           </button>
  
         </Section>
@@ -243,7 +243,7 @@ export default function HomePage() {
               disabled={foundingEmail.loading}
               className="mt-4 rounded-md bg-sts-accent px-6 py-2 text-sm text-sts-bg hover:opacity-90"
               >
-             {foundingEmail.loading ? "Submitting..." : "Join Early Access"}
+             {foundingEmail.loading ? "Submitting..." : "JOIN EARLY ACCESS"}
            </button>
          </div>
  

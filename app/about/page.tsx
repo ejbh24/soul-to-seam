@@ -101,7 +101,7 @@ export default function AboutPage() {
             disabled={foundingEmail.loading}
             className="mt-4 rounded-md bg-sts-accent px-6 py-2 text-sm text-sts-bg hover:opacity-90"
             >
-            {foundingEmail.loading ? "Submitting..." : "Join Early Access"}
+            {foundingEmail.loading ? "Submitting..." : "JOIN EARLY ACCESS"}
           </button>
 
           {foundingEmail.error && (
