@@ -97,7 +97,7 @@ export default function AboutPage() {
               value={foundingEmail.email}
               onChange={(e) => foundingEmail.setEmail(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && foundingEmail.submit()}
-              placeholder="Email"
+              placeholder="EMAIL"
               className="w-[520px] max-w-[70vw] rounded-md border border-black/10 bg-white px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-sts-accent/40"
             />
           </div>
