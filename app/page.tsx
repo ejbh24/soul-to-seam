@@ -124,7 +124,7 @@ export default function HomePage() {
       </Section>
 
       {/* Outerwear that carries itself */}
-      <div className="bg-sts-bg">
+      <div id="how-it-works" className="bg-sts-bg scroll-mt-20">
         <Section className="pt-12 pb-14 text-center">
           <h2 className="text-xl">Outerwear That Carries Itself</h2>
 
@@ -146,9 +146,12 @@ export default function HomePage() {
             Converts in seconds. Pocket access in both forms. Patent Pending.
           </p>
 
-          <a href="#early-access" className="mt-4 block w-[85%] mx-auto rounded-md bg-sts-accent py-2 text-sm text-sts-bg text-center">
+          <Link
+            href="/?section=early-access"
+            className="mt-4 block w-[85%] mx-auto rounded-md bg-sts-accent py-2 text-sm text-sts-bg text-center"
+          >
             Join Early Access
-          </a>
+          </Link>
  
         </Section>
       </div>
@@ -187,7 +190,7 @@ export default function HomePage() {
 
       {/* Designed for Real Life */}
       <Section className="pt-12 pb-12 text-center">
-        <h2 className="text-xl">Designed for Real Life. Completed by You.</h2>
+        <h2 id="brand-philosophy" className="text-xl scroll-mt-28">Designed for Real Life. Completed by You.</h2>
         <p className="mx-auto mt-4 max-w-[760px] text-sm text-black/70">
           Soul to Seam is a design-led brand creating adaptable, functional products that reduce friction in everyday life,
           completed through the identity and expression of the wearer.
@@ -273,9 +276,15 @@ export default function HomePage() {
               </h3>
 
               <div className="mt-6 space-y-3 text-[18px] text-black/85">
-                <p>How It Works</p>
-                <p>Brand Philosophy</p>
-                <p>About</p>
+                <Link href="/?section=how-it-works" className="block hover:underline">
+                  How It Works
+                </Link>
+                <Link href="/?section=brand-philosophy" className="block hover:underline">
+                  Brand Philosophy
+                </Link>
+                <Link href="/about" className="block hover:underline">
+                  About
+                </Link>
               </div>
             </div>
 
