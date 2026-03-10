@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <>
     <Header
-      imageSrc="/header_2.png"
+      imageSrc="/header_2.jpeg"
       imageAlt="About header"
       navClassName="text-white"
       studioHref="/?section=studio"
