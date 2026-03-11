@@ -20,24 +20,24 @@ const quadrantImages = [
 const studioWheels = [
   {
     alt: "Leather JacketBag",
-    images: ["/solo.png"], // leave first wheel untouched for now
+    images: ["/solo.jpg"], // leave first wheel untouched for now
   },
   {
     alt: "Denim JacketBag",
     images: [
-      "/wheel_2_a.png",
-      "/wheel_2_b.png",
-      "/wheel_2_c.png",
-      "/wheel_2_d.png",
+      "/wheel_2_a.jpg",
+      "/wheel_2_b.jpg",
+      "/wheel_2_c.jpg",
+      "/wheel_2_d.jpg",
     ],
   },
   {
     alt: "Corduroy JacketBag",
     images: [
-      "/wheel_3_a.png",
-      "/wheel_3_b.png",
-      "/wheel_3_c.png",
-      "/wheel_3_d.png",
+      "/wheel_3_a.jpg",
+      "/wheel_3_b.jpg",
+      "/wheel_3_c.jpg",
+      "/wheel_3_d.jpg",
     ],
   },
 ];
