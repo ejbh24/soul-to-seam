@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Playfair_Display } from "next/font/google";
 import { CrossPageScrollOnLoad } from "@/components/CrossPageScrollOnLoad";
 import Image from "next/image";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import { Header } from "@/components/Header";
 import { ScrollOnLoad } from "@/components/ScrollOnLoad";
 import { useEmailCapture } from "@/components/useEmailCapture"
@@ -17,10 +17,29 @@ const quadrantImages = [
   { src: "/quadrant_d.png", alt: "Bottom right jacket problem image" },
 ];
 
-const studioImages = [
-  { src: "/solo1.png", alt: "Leather JacketBag" },
-  { src: "/solo2.png", alt: "Denim JacketBag" },
-  { src: "/solo3.png", alt: "Corduroy JacketBag" },
+const studioWheels = [
+  {
+    alt: "Leather JacketBag",
+    images: ["/solo.png"], // leave first wheel untouched for now
+  },
+  {
+    alt: "Denim JacketBag",
+    images: [
+      "/wheel_2_a.png",
+      "/wheel_2_b.png",
+      "/wheel_2_c.png",
+      "/wheel_2_d.png",
+    ],
+  },
+  {
+    alt: "Corduroy JacketBag",
+    images: [
+      "/wheel_3_a.png",
+      "/wheel_3_b.png",
+      "/wheel_3_c.png",
+      "/wheel_3_d.png",
+    ],
+  },
 ];
 
 const playfair = Playfair_Display({
@@ -41,6 +60,7 @@ function Section({
 export default function HomePage() {
   const heroEmail = useEmailCapture("home-hero");
   const foundingEmail = useEmailCapture("home-founding");
+  const [studioIndexes, setStudioIndexes] = useState([0, 0, 0]);
   return (
     <>
       <Suspense fallback={null}>
@@ -187,25 +207,42 @@ export default function HomePage() {
             The JacketBag, exhibited in leather, denim, and corduroy.
           </p>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6">
-            {studioImages.map((image, i) => (
-              <button
-                key={i}
-                className="group relative w-[70%] md:w-full mx-auto h-[90vw] md:h-96 rounded"
-                aria-label={`Studio image ${i + 1}`}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  loading="eager"
-                  className="object-cover"
-                />
+            {studioWheels.map((wheel, i) => {
+              const currentIndex = studioIndexes[i];
+              const currentSrc = wheel.images[currentIndex];
+              const isStaticWheel = wheel.images.length === 1;
 
-                <span className="absolute top-1/2 -translate-y-1/2 left-[calc(100%+10px)] md:left-1/2 md:top-[calc(100%+10px)] md:-translate-x-1/2 md:translate-y-0 opacity-60 group-hover:opacity-100 text-2xl">
-                  →
-                </span>
-              </button>
-            ))}
+              return (
+                <button
+                  key={i}
+                  onClick={() => {
+                    if (isStaticWheel) return;
+
+                    setStudioIndexes((prev) => {
+                      const next = [...prev];
+                      next[i] = (next[i] + 1) % wheel.images.length;
+                      return next;
+                    });
+                  }}
+                  className="group relative w-[70%] md:w-full mx-auto h-[90vw] md:h-96 rounded"
+                  aria-label={`Studio image ${i + 1}`}
+                  type="button"
+                >
+                  <Image
+                    key={currentSrc}
+                    src={currentSrc}
+                    alt={wheel.alt}
+                    fill
+                    loading="eager"
+                    className="object-cover"
+                  />
+
+                  <span className="absolute top-1/2 -translate-y-1/2 left-[calc(100%+10px)] md:left-1/2 md:top-[calc(100%+10px)] md:-translate-x-1/2 md:translate-y-0 group-hover:opacity-100 text-2xl">
+                    →
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </Section>
       </div>
