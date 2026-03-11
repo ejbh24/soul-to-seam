@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Playfair_Display } from "next/font/google";
 import { CrossPageScrollOnLoad } from "@/components/CrossPageScrollOnLoad";
 import Image from "next/image";
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { ScrollOnLoad } from "@/components/ScrollOnLoad";
 import { useEmailCapture } from "@/components/useEmailCapture"
@@ -58,6 +58,58 @@ function Section({
   children: React.ReactNode;
 }) {
   return <section className={`mx-auto max-w-[980px] px-6 ${className}`}>{children}</section>;
+}
+
+function FadeImage({
+  src,
+  alt,
+}: {
+  src: string;
+  alt: string;
+}) {
+  const [displaySrc, setDisplaySrc] = useState(src);
+  const [incomingSrc, setIncomingSrc] = useState<string | null>(null);
+  const [showIncoming, setShowIncoming] = useState(false);
+
+  useEffect(() => {
+    if (src === displaySrc) return;
+
+    setIncomingSrc(src);
+    setShowIncoming(false);
+  }, [src, displaySrc]);
+
+  return (
+    <div className="absolute inset-0 bg-black/10">
+      <Image
+        src={displaySrc}
+        alt={alt}
+        fill
+        loading="eager"
+        className="object-cover"
+      />
+
+      {incomingSrc && (
+        <Image
+          src={incomingSrc}
+          alt={alt}
+          fill
+          loading="eager"
+          className={`object-cover transition-opacity duration-300 ${
+            showIncoming ? "opacity-100" : "opacity-0"
+          }`}
+          onLoad={() => {
+            setShowIncoming(true);
+
+            setTimeout(() => {
+              setDisplaySrc(incomingSrc);
+              setIncomingSrc(null);
+              setShowIncoming(false);
+            }, 300);
+          }}
+        />
+      )}
+    </div>
+  );
 }
 
 export default function HomePage() {
@@ -231,12 +283,9 @@ export default function HomePage() {
                   aria-label={`Studio image ${i + 1}`}
                   type="button"
                 >
-                  <Image
+                  <FadeImage
                     src={currentSrc}
                     alt={wheel.alt}
-                    fill
-                    loading="eager"
-                    className="object-cover"
                   />
 
                   <span className="absolute top-1/2 -translate-y-1/2 left-[calc(100%+10px)] md:left-1/2 md:top-[calc(100%+10px)] md:-translate-x-1/2 md:translate-y-0 group-hover:opacity-100 text-2xl">
