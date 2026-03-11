@@ -20,7 +20,10 @@ const quadrantImages = [
 const studioWheels = [
   {
     alt: "Leather JacketBag",
-    images: ["/solo.jpg"], // leave first wheel untouched for now
+    images: [
+      "/wheel_1_a.jpg",
+      "/wheel_1_b.jpeg",
+    ],
   },
   {
     alt: "Denim JacketBag",
