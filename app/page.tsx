@@ -285,7 +285,7 @@ export default function HomePage() {
                     alt={wheel.alt}
                   />
 
-                  <span className="absolute top-1/2 -translate-y-1/2 left-[calc(100%+10px)] md:left-1/2 md:top-[calc(100%+10px)] md:-translate-x-1/2 md:translate-y-0 group-hover:opacity-100 text-2xl">
+                  <span className="absolute top-1/2 -translate-y-1/2 left-[calc(100%+11px)] md:left-1/2 md:top-[calc(100%+11px)] md:-translate-x-1/2 md:translate-y-0 text-3xl opacity-60 hover:opacity-100 cursor-pointer transition-opacity">
                     →
                   </span>
                 </button>
