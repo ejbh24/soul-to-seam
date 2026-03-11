@@ -281,10 +281,45 @@ export default function HomePage() {
               </h3>
 
               <div className="mt-6 flex items-center gap-6 text-[44px] text-black/45">
-                <FaFacebookF />
-                <FaInstagram />
-                <FaTiktok />
-                <FaLinkedinIn />
+                <a
+                  href="https://www.facebook.com/profile.php?id=61587957758639&mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Soul to Seam on Facebook"
+                  className="transition-all hover:text-black hover:scale-110"
+                >
+                  <FaFacebookF />
+                </a>
+
+                <a
+                  href="https://www.instagram.com/soultoseam?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Soul to Seam on Instagram"
+                  className="transition-all hover:text-black hover:scale-110"
+                >
+                  <FaInstagram />
+                </a>
+
+                <a
+                  href="https://www.tiktok.com/@soultoseam?_r=1&_t=ZP-94ahrtlCOoo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Soul to Seam on TikTok"
+                  className="transition-all hover:text-black hover:scale-110"
+                >
+                  <FaTiktok />
+                </a>
+
+                <a
+                  href="https://linkedin.com/company/soultoseam"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Soul to Seam on LinkedIn"
+                  className="transition-all hover:text-black hover:scale-110"
+                >
+                  <FaLinkedinIn />
+                </a>
               </div>
 
               <p className="mt-4 text-[18px] text-black/80">
