@@ -79,32 +79,29 @@ function FadeImage({
   }, [src, displaySrc]);
 
   return (
-    <div className="absolute inset-0 bg-black/10">
-      <Image
+    <div className="absolute inset-0 overflow-hidden bg-black/10">
+      <img
         src={displaySrc}
         alt={alt}
-        fill
-        loading="eager"
-        className="object-cover"
+        className="absolute inset-0 h-full w-full object-cover"
       />
 
       {incomingSrc && (
-        <Image
+        <img
           src={incomingSrc}
           alt={alt}
-          fill
-          loading="eager"
-          className={`object-cover transition-opacity duration-300 ${
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${
             showIncoming ? "opacity-100" : "opacity-0"
           }`}
           onLoad={() => {
             setShowIncoming(true);
+          }}
+          onTransitionEnd={() => {
+            if (!showIncoming || !incomingSrc) return;
 
-            setTimeout(() => {
-              setDisplaySrc(incomingSrc);
-              setIncomingSrc(null);
-              setShowIncoming(false);
-            }, 300);
+            setDisplaySrc(incomingSrc);
+            setIncomingSrc(null);
+            setShowIncoming(false);
           }}
         />
       )}
