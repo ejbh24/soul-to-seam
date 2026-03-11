@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     template: "%s · Soul to Seam",
   },
   description: "Adaptable, functional products designed for real life. Completed by the wearer.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
