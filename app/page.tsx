@@ -229,7 +229,6 @@ export default function HomePage() {
                   type="button"
                 >
                   <Image
-                    key={currentSrc}
                     src={currentSrc}
                     alt={wheel.alt}
                     fill
