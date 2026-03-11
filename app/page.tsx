@@ -60,7 +60,7 @@ function Section({
   return <section className={`mx-auto max-w-[980px] px-6 ${className}`}>{children}</section>;
 }
 
-function FadeImage({
+function LoadingImage({
   src,
   alt,
 }: {
@@ -68,42 +68,36 @@ function FadeImage({
   alt: string;
 }) {
   const [displaySrc, setDisplaySrc] = useState(src);
-  const [incomingSrc, setIncomingSrc] = useState<string | null>(null);
-  const [showIncoming, setShowIncoming] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (src === displaySrc) return;
 
-    setIncomingSrc(src);
-    setShowIncoming(false);
+    setLoading(true);
+
+    const img = new window.Image();
+    img.src = src;
+
+    img.onload = () => {
+      setDisplaySrc(src);
+      setLoading(false);
+    };
   }, [src, displaySrc]);
 
   return (
-    <div className="absolute inset-0 overflow-hidden bg-black/10">
-      <img
+    <div className="absolute inset-0 overflow-hidden">
+      <Image
         src={displaySrc}
         alt={alt}
-        className="absolute inset-0 h-full w-full object-cover"
+        fill
+        loading="eager"
+        className="object-cover"
       />
 
-      {incomingSrc && (
-        <img
-          src={incomingSrc}
-          alt={alt}
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-300 ${
-            showIncoming ? "opacity-100" : "opacity-0"
-          }`}
-          onLoad={() => {
-            setShowIncoming(true);
-          }}
-          onTransitionEnd={() => {
-            if (!showIncoming || !incomingSrc) return;
-
-            setDisplaySrc(incomingSrc);
-            setIncomingSrc(null);
-            setShowIncoming(false);
-          }}
-        />
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="h-5 w-5 rounded-full border border-black/20 border-t-black/70 animate-spin" />
+        </div>
       )}
     </div>
   );
@@ -280,7 +274,7 @@ export default function HomePage() {
                   aria-label={`Studio image ${i + 1}`}
                   type="button"
                 >
-                  <FadeImage
+                  <LoadingImage
                     src={currentSrc}
                     alt={wheel.alt}
                   />
