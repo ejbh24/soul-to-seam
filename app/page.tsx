@@ -106,7 +106,7 @@ function LoadingImage({
 }
 
 function LoadingVideo() {
-  const [buffering, setBuffering] = useState(false);
+  const [showSpinner, setShowSpinner] = useState(true);
 
   return (
     <div className="relative w-full h-full">
@@ -117,15 +117,18 @@ function LoadingVideo() {
         loop
         playsInline
         preload="metadata"
-        onWaiting={() => setBuffering(true)}
-        onStalled={() => setBuffering(true)}
-        onPlaying={() => setBuffering(false)}
-        onCanPlay={() => setBuffering(false)}
+        controls={false}
+        onLoadStart={() => setShowSpinner(true)}
+        onWaiting={() => setShowSpinner(true)}
+        onStalled={() => setShowSpinner(true)}
+        onSuspend={() => setShowSpinner(true)}
+        onCanPlay={() => setShowSpinner(false)}
+        onPlaying={() => setShowSpinner(false)}
       >
         <source src="/conversion.mp4" type="video/mp4" />
       </video>
 
-      {buffering && (
+      {showSpinner && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="h-5 w-5 rounded-full border border-black/20 border-t-black/70 animate-spin" />
         </div>
