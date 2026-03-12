@@ -21,9 +21,9 @@ const studioWheels = [
   {
     alt: "Leather JacketBag",
     images: [
-      "/wheel_1_a.jpg",
+      "/wheel_1_a.jpeg",
       "/wheel_1_b.jpeg",
-      "/wheel_1_c.jpg",
+      "/wheel_1_c.jpeg",
       "/wheel_1_d.jpeg",      
     ],
   },
