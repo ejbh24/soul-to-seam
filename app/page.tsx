@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Playfair_Display } from "next/font/google";
 import { CrossPageScrollOnLoad } from "@/components/CrossPageScrollOnLoad";
 import Image from "next/image";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { Header } from "@/components/Header";
 import { ScrollOnLoad } from "@/components/ScrollOnLoad";
 import { useEmailCapture } from "@/components/useEmailCapture"
@@ -97,6 +97,35 @@ function LoadingImage({
       />
 
       {loading && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="h-5 w-5 rounded-full border border-black/20 border-t-black/70 animate-spin" />
+        </div>
+      )}
+    </div>
+  );
+}
+
+function LoadingVideo() {
+  const [buffering, setBuffering] = useState(false);
+
+  return (
+    <div className="relative w-full h-full">
+      <video
+        className="w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        onWaiting={() => setBuffering(true)}
+        onStalled={() => setBuffering(true)}
+        onPlaying={() => setBuffering(false)}
+        onCanPlay={() => setBuffering(false)}
+      >
+        <source src="/conversion.mp4" type="video/mp4" />
+      </video>
+
+      {buffering && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <div className="h-5 w-5 rounded-full border border-black/20 border-t-black/70 animate-spin" />
         </div>
@@ -213,17 +242,9 @@ export default function HomePage() {
           </h2>
 
           <div className="mt-8 flex justify-center">
-            <div className="w-[85%] md:w-[50vh] max-w-[720px] h-[115vw] md:h-[78vh] rounded overflow-hidden bg-black/10">
-              <video
-                className="w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-              >
-                <source src="/conversion.mp4" type="video/mp4" />
-              </video>
-            </div>
+          <div className="w-[85%] md:w-[50vh] max-w-[720px] h-[115vw] md:h-[78vh] rounded overflow-hidden bg-black/10">
+            <LoadingVideo />
+          </div>
           </div>
 
           <p className="mt-6 text-[1.05rem] md:text-[1.525rem] text-black/70">
