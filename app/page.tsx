@@ -300,7 +300,7 @@ export default function HomePage() {
             From The Studio
           </h2>
           <p className="mt-2 text-[1.05rem] md:text-[1.525rem] text-black/70">
-            The JacketBag, exhibited in leather, denim, and corduroy.
+            The JacketBag, exhibited in faux leather, denim, and corduroy.
           </p>
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6">
             {studioWheels.map((wheel, i) => {
