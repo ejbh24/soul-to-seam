@@ -106,17 +106,35 @@ function LoadingImage({
 }
 
 function LoadingVideo() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const [showSpinner, setShowSpinner] = useState(true);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlay = () => {
+      video.play().catch(() => {});
+    };
+
+    tryPlay();
+
+    // Safari sometimes needs a tiny delay
+    const t = setTimeout(tryPlay, 300);
+
+    return () => clearTimeout(t);
+  }, []);
 
   return (
     <div className="relative w-full h-full">
       <video
+        ref={videoRef}
         className="w-full h-full object-cover"
         autoPlay
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         controls={false}
         onLoadStart={() => setShowSpinner(true)}
         onWaiting={() => setShowSpinner(true)}
