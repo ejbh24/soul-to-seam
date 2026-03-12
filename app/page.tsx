@@ -108,6 +108,7 @@ function LoadingImage({
 function LoadingVideo() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [showSpinner, setShowSpinner] = useState(true);
+  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -118,9 +119,7 @@ function LoadingVideo() {
     };
 
     tryPlay();
-
-    // Safari sometimes needs a tiny delay
-    const t = setTimeout(tryPlay, 300);
+    const t = setTimeout(tryPlay, 250);
 
     return () => clearTimeout(t);
   }, []);
@@ -136,17 +135,24 @@ function LoadingVideo() {
         playsInline
         preload="auto"
         controls={false}
-        onLoadStart={() => setShowSpinner(true)}
-        onWaiting={() => setShowSpinner(true)}
-        onStalled={() => setShowSpinner(true)}
-        onSuspend={() => setShowSpinner(true)}
-        onPause={() => setShowSpinner(true)}
-        onPlaying={() => setShowSpinner(false)}
+        onLoadStart={() => {
+          if (!hasStarted) setShowSpinner(true);
+        }}
+        onLoadedData={() => {
+          if (!hasStarted) setShowSpinner(false);
+        }}
+        onCanPlay={() => {
+          if (!hasStarted) setShowSpinner(false);
+        }}
+        onPlaying={() => {
+          setHasStarted(true);
+          setShowSpinner(false);
+        }}
       >
         <source src="/conversion.mp4" type="video/mp4" />
       </video>
 
-      {showSpinner && (
+      {showSpinner && !hasStarted && (
         <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
           <div className="h-6 w-6 rounded-full border-2 border-black/20 border-t-black/70 animate-spin" />
         </div>
