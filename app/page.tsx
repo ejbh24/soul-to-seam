@@ -23,6 +23,8 @@ const studioWheels = [
     images: [
       "/wheel_1_a.jpg",
       "/wheel_1_b.jpeg",
+      "/wheel_1_c.jpg",
+      "/wheel_1_d.jpeg",      
     ],
   },
   {
