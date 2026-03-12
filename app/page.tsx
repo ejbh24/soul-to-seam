@@ -122,15 +122,15 @@ function LoadingVideo() {
         onWaiting={() => setShowSpinner(true)}
         onStalled={() => setShowSpinner(true)}
         onSuspend={() => setShowSpinner(true)}
-        onCanPlay={() => setShowSpinner(false)}
+        onPause={() => setShowSpinner(true)}
         onPlaying={() => setShowSpinner(false)}
       >
         <source src="/conversion.mp4" type="video/mp4" />
       </video>
 
       {showSpinner && (
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="h-5 w-5 rounded-full border border-black/20 border-t-black/70 animate-spin" />
+        <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+          <div className="h-6 w-6 rounded-full border-2 border-black/20 border-t-black/70 animate-spin" />
         </div>
       )}
     </div>
